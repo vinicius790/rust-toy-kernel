@@ -1,0 +1,25 @@
+# Saída típica de `cargo run --release -- demo` (trechos; ticks variam)
+
+=== DEMO toy-kernel ===
+
+--- console ---
+[kernel] boot
+tick
+...
+yielder A
+yielder B
+sleeping
+awake
+spawned child
+hello from userland
+brk ok
+
+--- stats ---
+ticks            : <N>
+context switches : <N>
+preemptions      : <N>
+yields           : <N>
+syscalls         : <N>
+free pages       : <N>/256
+
+(simulação host — ver LIMITATIONS.md)

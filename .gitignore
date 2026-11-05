@@ -1,0 +1,9 @@
+/target/
+boot/build/
+**/*.rs.bk
+Cargo.lock.bak
+.DS_Store
+*.swp
+__pycache__/
+.idea/
+.vscode/

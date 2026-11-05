@@ -1,0 +1,33 @@
+[package]
+name = "toy-kernel"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+description = "Kernel de SO de brinquedo — simulador host com processos, syscalls e scheduler (catálogo 3.1 MVP)"
+license = "MIT"
+readme = "README.md"
+keywords = ["kernel", "os", "scheduler", "syscall", "educational"]
+categories = ["emulators", "simulation", "command-line-utilities"]
+
+[workspace]
+members = ["boot/kernel"]
+default-members = ["."]
+resolver = "2"
+
+[[bin]]
+name = "toy-kernel"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+thiserror = "2"
+
+[dev-dependencies]
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[profile.dev]
+panic = "abort"
